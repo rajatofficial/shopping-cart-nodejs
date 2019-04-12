@@ -9,5 +9,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "sequelize": "^5.3.3",
+    "sqlite3": "^4.0.6"
+  }
 }
