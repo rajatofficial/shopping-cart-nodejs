@@ -18,7 +18,7 @@ selectList()
  
     function refreshList() {
       $.get('/products', (data) => {
-        $('#productlist').empty()
+        $('#productTable').empty()
 
         // console.log(1);
         for (let product of data) {
