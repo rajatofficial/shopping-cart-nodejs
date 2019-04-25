@@ -14,18 +14,24 @@ $(() => {
       else {
         console.log("hellossss");
         console.log(data)
-      
+        var net=0;
+        var sum=0;
         for (let item of data) {
+          net = item.product.productPrice*item.productQuantity;
+          sum=item.product.productPrice*item.productQuantity+sum;
           $('#cartTable').append(
             `
             <tr>
-            <td>item: ${item.product.productName}</td>
-            <td>vendor: ${item.product.vendor.name}</td>
-            <td>qty: ${item.productQuantity}</td>
+            <td> ${item.product.productName}</td>
+            <td> ${item.product.vendor.name}</td>
+            <td> ${item.productQuantity}</td>
+            <td>${net}</td>
             </tr>
             `
           )
+          
         }
+        $('#sum').append(`<h3>Total: ${sum}</h3>`)
       }
     })
   }
