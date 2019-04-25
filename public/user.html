@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+
     <title>User Page</title>
     <script src="jquery.js"></script>
     <script src="User.js"></script>
 </head>
+<style>
+   
+   #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  #navli {
+    float: left;
+  }
+  #navli a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  #navli a:hover:not(.active) {
+    background-color: #111;
+  }
+</style>
 <body>
+        <ul id="navbar">
+                <li id="navli"><a href="/index.html">Vendors</a></li>
+                <li id="navli"><a href="/product.html">Products</a></li>
+                <li id="navli" style="float:right"><a href='/mycart.html'>Cart</a></li>
+                <li id="navli"><a href='/user.html'>User</a></li>
+
+              </ul>
+              <br>
     <input type="text" id="username" placeholder="Username">
     <input type="submit" id="loginButton" value="Login">
     <input type="submit" id="myCart" value="My Cart">
